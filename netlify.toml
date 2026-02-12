@@ -1,0 +1,10 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# /api/directions isteğini serverless function'a yönlendir
+[[redirects]]
+  from = "/api/directions"
+  to = "/.netlify/functions/directions"
+  status = 200
+  force = true
